@@ -1,0 +1,8 @@
+; PassProfile_R.def : Declares the module parameters for the DLL (Release Version).
+
+LIBRARY      "PassProfile_R"
+DESCRIPTION  'PassProfile Windows Dynamic Link Library (Release Version)'
+
+EXPORTS
+; Explicit exports can go here
+

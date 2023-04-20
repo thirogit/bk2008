@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<UpdaterCfg>
+<BaseURL>http://dobek.lh.pl/bk_updates/bk2013</BaseURL>
+<VersionInfoFileName>version.info</VersionInfoFileName>
+<ZipsDirName>zips/</ZipsDirName>
+</UpdaterCfg>

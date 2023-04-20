@@ -1,0 +1,8 @@
+; UpdaterCfg_RU.def : Declares the module parameters for the DLL (Release UnicodeVersion).
+
+LIBRARY      "UpdaterCfg_RU"
+DESCRIPTION  'UpdaterCfg Windows Dynamic Link Library (Release Unicode Version)'
+
+EXPORTS
+; Explicit exports can go here
+

@@ -1,0 +1,337 @@
+*%-----------------------------------------------
+*% GPD file
+*%
+*% Copyright (c) 2007 Seiko Instruments Inc.
+*%
+*% All Rights Reserved.
+*%-----------------------------------------------
+
+*GPDSpecVersion: "1.1"
+*GPDFileVersion: "1.1"
+*Include: "STDNAMES.GPD"
+*Include: "LOCALE.GPD"
+*ResourceDLL: "sii_dpus445_res.dll"
+*PrinterType: PAGE
+
+
+*%-----------------------------------------
+*%
+*%			 Orientation
+*%
+*%-----------------------------------------
+*Feature: Orientation
+{
+	*rcNameID: =ORIENTATION_DISPLAY
+	*DefaultOption: PORTRAIT
+	*Option: PORTRAIT
+	{
+		*rcNameID: =PORTRAIT_DISPLAY
+	}
+	*Option: LANDSCAPE_CC270
+	{
+		*rcNameID: =LANDSCAPE_DISPLAY
+	}
+}
+
+
+*%-----------------------------------------
+*%
+*%			 InputBin
+*%
+*%-----------------------------------------
+*Feature: InputBin
+{
+	*rcNameID: =PAPER_SOURCE_DISPLAY
+	*DefaultOption: AUTO
+	*Option: AUTO
+	{
+		*rcNameID: =AUTO_DISPLAY
+	}
+}
+
+
+*%-----------------------------------------
+*%
+*%			 Halftone
+*%
+*%-----------------------------------------
+*Feature: Halftone
+{
+	*rcNameID: =HALFTONING_DISPLAY
+    *DefaultOption: HT_PATSIZE_AUTO
+    *Option: HT_PATSIZE_AUTO
+    {
+        *rcNameID: =HT_AUTO_SELECT_DISPLAY
+    }
+	*Option: HT_PATSIZE_SUPERCELL_M
+	{
+		*rcNameID: =HT_SUPERCELL_DISPLAY
+	}
+	*Option: HT_PATSIZE_6x6_M
+	{
+		*rcNameID: =HT_DITHER6X6_DISPLAY
+	}
+	*Option: HT_PATSIZE_8x8_M
+	{
+		*rcNameID: =HT_DITHER8X8_DISPLAY
+	}
+	*Option: HT_PATSIZE_2x2_M
+	{
+		*rcNameID: =NONE_DISPLAY
+	}
+}
+
+
+*%-----------------------------------------
+*%
+*%			 Density level
+*%
+*%-----------------------------------------
+*Feature: PrintConcentration
+{
+	*rcNameID: 400
+	*FeatureType: DOC_PROPERTY
+	*DefaultOption: 100
+	*Option: 65
+	{
+		*rcNameID: 404
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 51
+		}
+	}
+	*Option: 70
+	{
+		*rcNameID: 405
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 52
+		}
+	}
+	*Option: 75
+	{
+		*rcNameID: 406
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 53
+		}
+	}
+	*Option: 80
+	{
+		*rcNameID: 407
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 54
+		}
+	}
+	*Option: 85
+	{
+		*rcNameID: 408
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 55
+		}
+	}
+	*Option: 90
+	{
+		*rcNameID: 409
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 56
+		}
+	}
+	*Option: 95
+	{
+		*rcNameID: 410
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 57
+		}
+	}
+	*Option: 100
+	{
+		*rcNameID: 411
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 58
+		}
+	}
+	*Option: 105
+	{
+		*rcNameID: 412
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 59
+		}
+	}
+	*Option: 110
+	{
+		*rcNameID: 413
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 60
+		}
+	}
+	*Option: 115
+	{
+		*rcNameID: 414
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 61
+		}
+	}
+	*Option: 120
+	{
+		*rcNameID: 415
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 62
+		}
+	}
+	*Option: 125
+	{
+		*rcNameID: 416
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 63
+		}
+	}
+	*Option: 130
+	{
+		*rcNameID: 417
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 64
+		}
+	}
+	*Option: 135
+	{
+		*rcNameID: 418
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.1
+			*CallbackID: 65
+		}
+	}
+}
+
+
+
+*%---------------------------------------------------
+*%
+*%			 Paper Discharge Control
+*%
+*%---------------------------------------------------
+*Feature: PaperOutput
+{
+	*rcNameID: 600
+	*FeatureType: DOC_PROPERTY
+	*DefaultOption: PrintArea
+	*Option: PrintArea
+	{
+		*rcNameID: 602
+		*Command: CmdSelect
+        {
+			*Order: DOC_SETUP.3
+			*CallbackID: 23
+		}
+	}
+	*Option: PaperSize
+	{
+		*rcNameID: 601
+		*Command: CmdSelect
+        {
+			*Order: DOC_SETUP.3
+			*CallbackID: 22
+        }
+	}
+}
+
+*switch: PaperOutput
+{
+    *case: PrintArea
+    {
+        *EjectPageWithFF?: TRUE
+    }
+    *default
+    {
+		*EjectPageWithFF?: FALSE
+    }
+}
+
+
+*%-----------------------------------------
+*%
+*%			 Printer Commands
+*%
+*%-----------------------------------------
+
+*Command: CmdStartDoc
+{
+	*Order: DOC_SETUP.2
+	*CallbackID: 5
+}
+
+*Command: CmdStartPage
+{
+ 	*Order: PAGE_SETUP.1
+	*CallbackID: 6
+}
+
+*Command: CmdEndPage
+{
+	*Order: PAGE_FINISH.1
+	*CallbackID: 7
+}
+
+*Command: CmdEndDoc
+{
+	*Order: DOC_FINISH.1
+	*CallbackID: 8
+}
+
+
+*%-----------------------
+*%		DataSend
+*%-----------------------
+*Command: CmdSendBlockData { *CallbackID: 12 }
+
+
+
+*%-----------------------
+*%		  Cursor
+*%-----------------------
+
+*Command: CmdXMoveAbsolute { *CallbackID: 3 }
+*Command: CmdYMoveAbsolute { *CallbackID: 4 }
+*Command: CmdCR { *CallbackID: 60 }
+*Command: CmdLF { *CallbackID: 61 }
+*Command: CmdFF { *CallbackID: 62 }
+*CursorXAfterCR: AT_CURSOR_X_ORIGIN
+*CursorXAfterSendBlockData: AT_CURSOR_X_ORIGIN
+*MirrorRasterByte?: TRUE
+*OutputDataFormat: H_BYTE
+*OptimizeLeftBound?: TRUE	
+*SendMultipleRows? : TRUE
+
+EXTERN_GLOBAL: *StripBlanks: LIST(LEADING,ENCLOSED,TRAILING)
+
+
+
+
+
+

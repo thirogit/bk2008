@@ -1,0 +1,20 @@
+// ProjectConfigAtl.idl : IDL source for ProjectConfigAtl.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ProjectConfigAtl.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(8DD3D207-B8CF-40C2-98A7-6D6FB40DA337),
+	version(1.0),
+	helpstring("ProjectConfigAtl 1.0 Type Library")
+]
+library PROJECTCONFIGATLLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+};

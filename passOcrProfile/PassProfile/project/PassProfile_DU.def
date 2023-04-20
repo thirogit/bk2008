@@ -1,0 +1,8 @@
+; PassProfile_DU.def : Declares the module parameters for the DLL (Debug Unicode Version).
+
+LIBRARY      "PassProfile_DU"
+DESCRIPTION  'PassProfile Windows Dynamic Link Library (Debug Unicode Version)'
+
+EXPORTS
+; Explicit exports can go here
+

@@ -1,0 +1,145 @@
+*%-----------------------------------------------
+*% GPD file
+*%
+*% Copyright (c) 2007 Seiko Instruments Inc.
+*%
+*% All Rights Reserved.
+*%-----------------------------------------------
+
+
+*Include: "SII_DPUS445.GPD"
+*GPDFileName: "SII_DPUS445_S.GPD"
+*ModelName: "SII DPU-S445"
+*MasterUnits: PAIR(203,203)
+*OEMCustomData: "299W104"
+
+
+*%-----------------------------------------
+*%
+*%			 Resolution
+*%
+*%-----------------------------------------
+*Feature: Resolution
+{
+	*rcNameID: =RESOLUTION_DISPLAY
+	*DefaultOption: Option1
+	*Option: Option1
+	{
+		*Name: "203 x 203 " =DOTS_PER_INCH
+		*DPI: PAIR(203, 203)
+		*TextDPI: PAIR(203, 203)
+		*RequireUniDir?: TRUE
+		*SpotDiameter: 100
+	}
+}
+
+*XMoveUnit: 203
+*YMoveUnit: 203
+*MinStripBlankPixels: 203
+
+
+*%-----------------------------------------
+*%
+*%			 PaperSize
+*%
+*%-----------------------------------------
+*Feature: PaperSize
+{
+	*rcNameID: =PAPER_SIZE_DISPLAY
+	*DefaultOption: 112x297
+
+	*Option: 112x158
+	{
+		*rcNameID: 271
+		*PageDimensions: PAIR(896, 1263)
+		*PrintableArea: PAIR(831, 1163)
+		*PrintableOrigin: PAIR(32, 100)
+		*CursorOrigin: PAIR(32, 88)
+	}
+	*Option: CUT_SHEET
+	{
+		*rcNameID: 272
+		*Command: CmdSelect
+        {
+			*Order: DOC_SETUP.5
+			*CallbackID: 21
+        }
+		*PageDimensions: PAIR(896, 1263)
+		*PrintableArea: PAIR(831, 1095)
+		*PrintableOrigin: PAIR(32, 48)
+		*CursorOrigin: PAIR(32, 48)
+	}
+	*Option: 112x297
+	{
+		*rcNameID: 269
+		*PageDimensions: PAIR(896, 2373)
+		*PrintableArea: PAIR(831, 2273)
+		*PrintableOrigin: PAIR(32, 100)
+		*CursorOrigin: PAIR(32, 88)
+	}
+	*Option: A4
+	{
+		*rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+		*PrintableArea: PAIR(831, 2273)
+		*PrintableOrigin: PAIR(32, 100)
+		*CursorOrigin: PAIR(32, 88)
+	}
+	*Option: LETTER
+	{
+		*rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+		*PrintableArea: PAIR(831, 2135)
+		*PrintableOrigin: PAIR(32, 100)
+		*CursorOrigin: PAIR(32, 88)
+	}
+	*Option: A6
+	{
+		*rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+		*PrintableArea: PAIR(831, 1082) 
+		*PrintableOrigin: PAIR(4, 100)
+		*CursorOrigin: PAIR(4, 88)
+	}
+	*Option: CUSTOMSIZE
+	{
+		*rcNameID: =USER_DEFINED_SIZE_DISPLAY
+		*MinSize: PAIR(203, 239)
+		*MaxSize: PAIR(900, 26208)
+		*MaxPrintableWidth: 831
+
+		*MinLeftMargin: 32
+		*CustPrintableSizeX: %d{831}
+		*CustCursorOriginX: %d{32}
+		*CustPrintableOriginX: %d{32}
+		*CustPrintableOriginY: %d{100}
+		*CustCursorOriginY: %d{88}
+		*CustPrintableSizeY: %d{PhysPaperLength - 100}
+   }
+}
+
+
+
+
+*%---------------------------------------------------
+*%
+*%			 Print mode
+*%
+*%---------------------------------------------------
+*Feature: PrintMode
+{
+	*rcNameID: 340
+	*FeatureType: DOC_PROPERTY
+	*DefaultOption: AutoMode
+	*Option: AutoMode
+	{
+		*rcNameID: 342
+	}
+	*Option: StdModeFix
+	{
+		*rcNameID: 341
+		*Command: CmdSelect
+		{
+			*Order: DOC_SETUP.2
+			*CallbackID: 20
+		}
+	}
+}
+

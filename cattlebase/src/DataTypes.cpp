@@ -1,0 +1,5 @@
+#include "stdafx.h"
+#include "DataTypes.h"
+#include "log.h"
+#include "CattleSQL.h"
+#include "consts.h"

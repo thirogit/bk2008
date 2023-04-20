@@ -1,0 +1,69 @@
+<html>
+<head>
+ <title>Database properties</title>
+</head>
+<body>
+{%header:Summary%}
+<br>
+<br>
+<font size=+2>{%object_name%}</font><br>
+{%fullpath%}
+<br><br>
+<table bgcolor="white" border=0 cellpadding=2 cellspacing=0 valign=top>
+    <tr><td>
+
+<!-- left table -->
+<table cellspacing=1 cellpadding=2 border=0 bgcolor="black">
+  <tbody>
+    <tr bgcolor="navy">
+       <td nowrap colspan=2><b><font color=white>Database file</font></b></td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>ODS Version</td><td align="right" bgcolor="#CCCCFF" nowrap>{%ods_version%}</td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Page size</td><td align="right" bgcolor="#CCCCFF" nowrap>{%page_size%}</td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Pages</td><td align="right" bgcolor="#CCCCFF" nowrap>{%pages%}</td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Size on disk</td><td align="right" bgcolor="#CCCCFF" nowrap>{%filesize%}</td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Page buffers</td><td align="right" bgcolor="#CCCCFF" nowrap>{%page_buffers%}</td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Read only</td><td align="right" bgcolor="#CCCCFF" nowrap>{%read_only%}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- left table end-->
+</td><td> &nbsp; </td><td>
+<!-- right table -->
+<table cellspacing=1 cellpadding=2 border=0 bgcolor="black">
+  <tbody>
+    <tr bgcolor="navy">
+       <td colspan=2><b><font color=white>Settings</font></b></td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Dialect</td><td align="right" bgcolor="#CCCCFF" nowrap>{%dialect%}</td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Default character set</td><td align="right" bgcolor="#CCCCFF" nowrap>{%default_charset%}</td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Sweep interval</td>
+        <td align="right" bgcolor="#CCCCFF" nowrap><a href="fr://edit_sweep_interval?parent_window={%parent_window%}&amp;object_address={%object_address%}">{%sweep_interval%}</a></td>
+    </tr>
+    <tr bgcolor="#DDDDFF">
+        <td nowrap>Forced writes</td>
+        <td align="right" bgcolor="#CCCCFF" nowrap><a href="fr://edit_forced_writes?parent_window={%parent_window%}&amp;object_address={%object_address%}">{%forced_writes%}</a></td>
+    </tr>
+  </tbody>
+</table>
+<!-- right table end -->
+    </td></tr>
+</table>
+</body>
+</html>

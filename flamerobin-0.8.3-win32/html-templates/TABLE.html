@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Table properties</title>
+</head>
+<body>
+{%header:Summary%}
+<br><br>
+<font size=+2>{%object_name%}</font><br>
+Owner: {%owner_name%}<br>
+{%object_description%} {%NotSystem:[<a
+ href="fr://edit_description?parent_window={%parent_window%}&amp;object_address={%object_address%}&amp;object_type=TABLE&amp;object_name={%object_name%}">edit</a>]
+%}
+<br><br>
+<table cellspacing=1 cellpadding=2 border=0 bgcolor=black>
+  <tbody>
+    <tr bgcolor="navy">
+      {%NotSystem:
+      <td></td>
+      %}
+      <td><b><font color=white>Field</font></b></td>
+      <td><b><font color=white>Type</font></b></td>
+      <td><b><font color=white>NULL</font></b></td>
+      {%show_if_config:DisplayColumnDefault:true:
+      <td><b><font color=white>Default</font></b></td>%}
+      {%show_if_config:DisplayColumnDescription:true:
+      <td><b><font color=white>Description</font></b></td>%}
+    </tr>
+    {%columns:
+    <tr bgcolor="{%varcolor:#DDDDFF/#CCCCFF%}">
+      {%ParentNotSystem:
+      <td valign="top" nowrap>
+          <a href="fr://drop_field?parent_window={%parent_window%}&amp;object_address={%object_address%}"><img src="{%fr_home%}/html-templates/drop.png"></a>
+          <a href="fr://edit_field?parent_window={%parent_window%}&amp;object_address={%object_address%}"><img src="{%fr_home%}/html-templates/view.png"></a>
+      </td>
+      %}
+      <td nowrap valign="top">{%object_name%}</td>
+      <td nowrap valign="top">{%column_datatype%}</td>
+      <td nowrap valign="top">{%column_nulloption%}</td>
+      {%show_if_config:displayColumnDefault:true:
+      <td nowrap valign="top">{%column_default%}</td>%}
+      {%show_if_config:displayColumnDescription:true:
+      <td valign="top"><font size=-1>{%object_description%} {%ParentNotSystem:[<a
+        href="fr://edit_description?parent_window={%parent_window%}&amp;object_address={%object_address%}&amp;object_type=COLUMN&amp;object_name={%object_name%}">edit</a>]</font></td>%}
+        %}
+    </tr>%}
+  </tbody>
+</table>
+<br><br>
+{%NotSystem:
+<a href="fr://add_field?parent_window={%parent_window%}&amp;object_address={%object_address%}">Add field</a> | <a
+ href="fr://reorder_fields?parent_window={%parent_window%}&amp;object_address={%object_address%}">Reorder fields</a> | <a
+ href="fr://drop_fields?parent_window={%parent_window%}&amp;object_address={%object_address%}">Drop fields</a> | <a
+ href="fr://alter_relation?parent_window={%parent_window%}&amp;object_address={%object_address%}">Generate rebuild script</a>
+%}
+<br>
+</body>
+</html>

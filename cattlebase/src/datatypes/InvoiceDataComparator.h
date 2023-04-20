@@ -1,0 +1,35 @@
+#ifndef __INVOICEDATACOMPARATOR_H__
+#define __INVOICEDATACOMPARATOR_H__
+
+#include "RawData.h"
+#include "Invoice.h"
+#include "RawDataComparator.h"
+
+enum INVOIVEDATA_MEMBERS
+{
+	INVS_SORT_BY_NUMBER = RAWDATA_MEMBER_BASE+1,
+	INVS_SORT_BY_INVDATE,
+	INVS_SORT_BY_CORRECT,
+	INVS_SORT_BY_HENT,
+	INVS_SORT_BY_QTY,
+	INVS_SORT_BY_VAT,
+	INVS_SORT_BY_PAYWAY,
+	INVS_SORT_BY_CUSTOMNO,
+	INVS_SORT_BY_GROSSVALUE,
+	INVS_SORT_BY_NETVALUE,
+	INVS_SORT_BY_GROSSVALUEAFTERCORRECT,	
+	INVS_SORT_BY_PAID,	
+	INVS_SORT_BY_EXTRAS,
+	INVS_SORT_BY_PAYDUEDAYS,
+	INVS_SORT_BY_PAYDUEDAYSDATE
+};
+
+
+class InvoiceDataComparator : public RawDataComparator<Invoice>
+{
+public:
+	virtual COMPARE_RESULT CompareDataBy(UINT dataMember,Invoice* DataLeft,Invoice* DataRight);
+};
+
+
+#endif

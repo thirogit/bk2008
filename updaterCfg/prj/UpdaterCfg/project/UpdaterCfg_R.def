@@ -1,0 +1,8 @@
+; UpdaterCfg_R.def : Declares the module parameters for the DLL (Release Version).
+
+LIBRARY      "UpdaterCfg_R"
+DESCRIPTION  'UpdaterCfg Windows Dynamic Link Library (Release Version)'
+
+EXPORTS
+; Explicit exports can go here
+

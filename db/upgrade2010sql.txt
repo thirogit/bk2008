@@ -1,0 +1,70 @@
+CREATE TABLE cowpricing
+(
+cow 					INT NOT NULL,
+invoice					INT NOT NULL,
+price					NUMERIC(15,5) NOT NULL,
+stock					INT NOT NULL,
+weight					INT NOT NULL,
+CONSTRAINT cowpricing_stock_fk 	FOREIGN KEY (stock)     REFERENCES stocks(stockid),
+CONSTRAINT cowpricing_invoice_fk FOREIGN KEY (invoice) REFERENCES invoices(invoiceid),
+CONSTRAINT cowpricing_cattle_fk FOREIGN KEY (cow) REFERENCES cattle(animalid),
+CONSTRAINT cowpricing_pk  		PRIMARY KEY(cow,invoice)
+);
+
+ALTER TABLE HENTS ADD LONGITUDE Numeric(15,12);
+
+ALTER TABLE HENTS ADD LATITUDE Numeric(15,12);
+
+ALTER TABLE HENTS ADD CELLPHONE varchar(16);
+
+ALTER TABLE HENTS ADD EMAIL varchar(64);
+
+insert into COWPRICING(COW, INVOICE, PRICE, STOCK, WEIGHT)
+select 
+animalid as cow,
+rrinv as invoice,
+buyprice as price,
+iif(buystock is not null,buystock,stock) as stock,
+iif(buyweight is not null,buyweight,iif(weight is not null,weight,1)) as weight
+ from cattle where rrinv is not null;
+ 
+ insert into COWPRICING(COW, INVOICE, PRICE, STOCK, WEIGHT)
+select 
+animalid as cow,
+b.INVOICE as invoice,
+buyprice as price,
+iif(buystock is not null,buystock,stock) as stock,
+iif(buyweight is not null,buyweight,iif(weight is not null,weight,1)) as weight
+ from cattle a left join indocs b on a.DOCIN = b.DOCID where a.rrinv is null and b.INVOICE is not null
+ 
+ 
+ insert into COWPRICING(COW, INVOICE, PRICE, STOCK, WEIGHT)
+select 
+animalid as cow,
+b.INVOICE as invoice,
+sellprice as price,
+iif(sellstock is not null,sellstock,stock) as stock,
+iif(sellweight is not null,sellweight,iif(weight is not null,weight,1)) as weight
+ from cattle a left join outdocs b on a.DOCout = b.DOCID where b.INVOICE is not null
+ 
+alter table rules add nosexvalue integer CHECK(nosexvalue = -1 OR nosexvalue = 1);
+
+UPDATE RULES SET NOSEXVALUE = '1' WHERE NOSEXVALUE IS NULL;
+
+UPDATE RDB$RELATION_FIELDS SET RDB$NULL_FLAG = 1WHERE RDB$FIELD_NAME = 'NOSEXVALUE' AND RDB$RELATION_NAME = 'RULES';
+
+ALTER TABLE CATTLE ADD ingrp Integer;
+
+ALTER TABLE CATTLE DROP BUYSTOCK
+ALTER TABLE CATTLE DROP BUYWEIGHT
+ALTER TABLE CATTLE DROP SELLSTOCK
+ALTER TABLE CATTLE DROP SELLWEIGHT
+ALTER TABLE CATTLE DROP BUYPRICE
+ALTER TABLE CATTLE DROP FIRSTSTOCK
+ALTER TABLE CATTLE DROP SELLPRICE
+ALTER TABLE CATTLE DROP FIRSTWEIGHT
+ALTER TABLE CATTLE ALTER PASSIMGLABEL TYPE Char(16);
+
+
+
+
