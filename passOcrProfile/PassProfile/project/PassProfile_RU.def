@@ -1,0 +1,8 @@
+; PassProfile_RU.def : Declares the module parameters for the DLL (Release UnicodeVersion).
+
+LIBRARY      "PassProfile_RU"
+DESCRIPTION  'PassProfile Windows Dynamic Link Library (Release Unicode Version)'
+
+EXPORTS
+; Explicit exports can go here
+

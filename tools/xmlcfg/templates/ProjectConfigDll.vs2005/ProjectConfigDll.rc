@@ -1,0 +1,288 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "treeicons.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Italian (Italy) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 16, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\ProjectConfigDll.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.ita\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041004B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "ProjectConfigDll DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "ProjectConfigDll\0"
+            VALUE "LegalCopyright", "Copyright (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "ProjectConfigDll.DLL\0"
+            VALUE "ProductName", "ProjectConfigDll Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x410, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CFG_TEMPLATE DIALOG DISCARDABLE  0, 0, 186, 90
+STYLE WS_CHILD
+FONT 8, "Tahoma"
+BEGIN
+END
+
+IDD_SPLITTERDLG DIALOG DISCARDABLE  0, 0, 282, 214
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tree",IDC_TREE,"SysTreeView32",WS_TABSTOP,7,7,85,53
+    PUSHBUTTON      "Cancel",IDCANCEL,227,192,48,15
+    PUSHBUTTON      "Ok",IDOK,175,192,48,15
+END
+
+IDD_INPUT_BOX DIALOGEX 0, 0, 199, 62
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input Box"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "OK",IDOK,90,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,142,41,50,14
+    EDITTEXT        IDC_TXT_VALUE,7,18,185,13,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Value :",IDC_LBL_CAPTION,7,6,185,11
+END
+
+IDD_CONTAINER_TEMPLATE DIALOG DISCARDABLE  0, 0, 317, 190
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Insert",IDC_CMD_INSERT,198,169,55,14
+    PUSHBUTTON      "Delete",IDC_CMD_DELETE,81,169,55,14
+    PUSHBUTTON      "Append",IDC_CMD_APPEND,139,169,55,14
+    PUSHBUTTON      "Edit",IDC_CMD_EDIT,255,169,55,14
+    CONTROL         "List1",IDC_ITEMLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | WS_TABSTOP,7,44,
+                    303,99
+END
+
+IDD_SPLITTERDLG_EMBED DIALOG DISCARDABLE  0, 0, 228, 137
+STYLE WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,171,7,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,171,24,50,14,NOT WS_VISIBLE
+    CONTROL         "Tree",IDC_TREE,"SysTreeView32",WS_TABSTOP,7,7,85,53
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_INPUT_BOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_SPLITTERDLG_EMBED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MNU_EDIT_ARRAY MENU DISCARDABLE 
+BEGIN
+    POPUP "EditArray"
+    BEGIN
+        MENUITEM "Append Item",                 ID_EDITARRAY_APPENDITEM
+    END
+END
+
+IDR_MNU_EDIT_ARRAY_ITEM MENU DISCARDABLE 
+BEGIN
+    POPUP "EditArrayItem"
+    BEGIN
+        MENUITEM "Insert Item",                 ID_EDITARRAYITEM_INSERTITEM
+        MENUITEM "Append Item",                 ID_EDITARRAYITEM_APPENDITEM
+        MENUITEM "Remove Item",                 ID_EDITARRAYITEM_REMOVEITEM
+    END
+END
+
+IDR_MNU_EDIT_MAP MENU DISCARDABLE 
+BEGIN
+    POPUP "EditMap"
+    BEGIN
+        MENUITEM "Create Item",                 ID_EDITMAP_CREATEITEM
+    END
+END
+
+IDR_MNU_EDIT_MAP_ITEM MENU DISCARDABLE 
+BEGIN
+    POPUP "EditMapItem"
+    BEGIN
+        MENUITEM "Create New Item",             ID_EDITMAPITEM_CREATEITEM
+        MENUITEM "Remove Item",                 ID_EDITMAPITEM_REMOVEITEM
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EMPTY               ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_CHK_CHECKED         ICON    DISCARDABLE     "res\\chkChecked.ico"
+IDI_CHK_UNCHECKED       ICON    DISCARDABLE     "res\\chkUnchecked.ico"
+IDI_VALIDATION_WARNING  ICON    DISCARDABLE     "res\\validation_warning.ico"
+IDI_VALIDATION_ERROR    ICON    DISCARDABLE     "res\\validation_error.ico"
+IDI_VALIDATION_INFO     ICON    DISCARDABLE     "res\\validation_info.ico"
+IDI_VALIDATION_QUESTION ICON    DISCARDABLE     "res\\validation_question.ico"
+IDI_CALENDAR            ICON    DISCARDABLE     "res\\calendar.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_COMBO_BOX_OVER      BITMAP  DISCARDABLE     "res\\combobox_over.bmp"
+IDB_COMBO_BOX_NORMAL    BITMAP  DISCARDABLE     "res\\combobox_normal.bmp"
+IDB_NODE_MINUS          BITMAP  DISCARDABLE     "res\\tree_minus.bmp"
+IDB_NODE_PLUS           BITMAP  DISCARDABLE     "res\\tree_plus.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_SPLITTER            CURSOR  DISCARDABLE     "res\\HO_SPLIT.CUR"
+#endif    // Italian (Italy) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ITA)
+#ifdef _WIN32
+LANGUAGE 16, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\ProjectConfigDll.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.ita\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

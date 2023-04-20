@@ -1,0 +1,6 @@
+#ifndef __CATTLEBASEMUTEX_H__
+#define __CATTLEBASEMUTEX_H__
+
+#define MUTEX_NAME "__CATTLEBASE_APP_SIMUTEX__"
+
+#endif

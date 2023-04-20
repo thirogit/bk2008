@@ -1,0 +1,129 @@
+;
+;       
+;	SII DPU-S Series Printer Installation File
+;
+;	Copyright (c) 2008-2009 Seiko Instruments Inc
+;	All Rights Reserved.
+;
+;
+;
+;
+
+[Version]
+Signature="$Windows NT$"
+Class=Printer
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Provider=%SII%
+LayoutFile=layout.inf
+DriverVer=09/01/2009,1.1.0.0
+
+
+
+[ClassInstall32.NT]
+AddReg=printer_class_addreg
+[printer_class_addreg]
+HKR,,,,%PrinterClassName%
+HKR,,Icon,,"-4"
+HKR,,Installer32,,"ntprint.DLL,ClassInstall32"
+HKR,,NoDisplayClass,,1
+HKR,,EnumPropPages32,,"printui.DLL,PrinterPropPageProvider"
+
+
+;
+; Manufacturer section.
+;
+; This section lists all of the manufacturers
+; that we will display in the Dialog box
+;
+
+[Manufacturer]
+%SII%=SII
+
+[OEM URLS]
+%SII%="http://www.sii.co.jp/sps/"
+
+
+;
+; Model Specifications Section
+;
+
+[SII]
+"SII DPU-S245"		= SII_DPUS245_S.GPD,USBPRINT\SIIDPU-S245B414
+"SII DPU-S445"		= SII_DPUS445_S.GPD,USBPRINT\SIIDPU-S445B5F4
+"SII DPU-S445 Reduce"	= SII_DPUS445_R.GPD,USBPRINT\SIIDPU-S445B5F4
+
+;
+; Installer section(s) referenced above.
+;
+[SII_DPUS245_S.GPD]
+CopyFiles = SiiCopyFiles,Sys32Files.NT 
+DataSection=UNIDRV_DATA
+DataFile=SII_DPUS245_S.GPD
+Include=NTPRINT.INF
+Needs=UNIDRV.OEM,LOCALE.OEM
+LanguageMonitor=%LANG_MON%
+VendorSetup=SII_DPUS445_SET.DLL,VendorSetup
+
+[SII_DPUS445_S.GPD]
+CopyFiles = SiiCopyFiles,Sys32Files.NT 
+DataSection=UNIDRV_DATA
+DataFile=SII_DPUS445_S.GPD
+Include=NTPRINT.INF
+Needs=UNIDRV.OEM,LOCALE.OEM
+LanguageMonitor=%LANG_MON%
+VendorSetup=SII_DPUS445_SET.DLL,VendorSetup
+
+[SII_DPUS445_R.GPD]
+CopyFiles = SiiCopyFiles,Sys32Files.NT 
+DataSection=UNIDRV_DATA
+DataFile=SII_DPUS445_R.GPD
+Include=NTPRINT.INF
+Needs=UNIDRV.OEM,LOCALE.OEM
+LanguageMonitor=%LANG_MON%
+VendorSetup=SII_DPUS445_SET.DLL,VendorSetup
+
+[DestinationDirs]
+DefaultDestDir=66000
+Sys32Files.NT=66002
+
+
+[SiiCopyFiles]
+SII_DPUS445.GPD 
+SII_DPUS245_S.GPD
+SII_DPUS445_S.GPD
+SII_DPUS445_R.GPD
+SII_DPUS445.INI
+SII_DPUS445_RES.DLL
+SII_DPUS445_UNI.DLL
+SII_DPUS445_UI.DLL
+SII_DPUS445_DIP.EXE
+
+[Sys32Files.NT]
+SII_DPUS445_MON.DLL
+SII_DPUS445_API.DLL
+SII_DPUS445_SET.DLL
+SII_DPUS_API.DLL
+
+[SourceDisksNames]
+1 = %disk1%,,,
+
+[SourceDisksFiles]
+SII_DPUS445.GPD		= 1
+SII_DPUS245_S.GPD	= 1
+SII_DPUS445_S.GPD	= 1
+SII_DPUS445_R.GPD	= 1
+SII_DPUS445.INI		= 1
+SII_DPUS445_RES.DLL	= 1
+SII_DPUS445_UNI.DLL	= 1
+SII_DPUS445_UI.DLL	= 1
+SII_DPUS445_MON.DLL = 1
+SII_DPUS445_API.DLL	= 1
+SII_DPUS_API.DLL	= 1
+SII_DPUS445_SET.DLL	= 1
+SII_DPUS445_DIP.EXE	= 1	
+
+[Strings]
+SII="Seiko Instruments Inc."
+PrinterClassName="Printers"
+disk1="Printer Driver Files for SII DPU-SX45 Thermal Printer"
+LANG_MON="SII DPU-S445 Print Monitor,SII_DPUS445_MON.DLL"

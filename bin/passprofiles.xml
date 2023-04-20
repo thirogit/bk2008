@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<PassProfiles>
+  <PassProfileArray>
+    <PassProfile PassDimX="1780" PassDimY="1310" PassProfileName="PROFIL1">
+      <BIRTHINFO>
+        <PassField Barcode="0"  H="90" W="440" X="381" Y="390"/>
+      </BIRTHINFO>
+      <EAN>
+        <PassField Barcode="0"  H="60" W="500" X="550" Y="160"/>
+      </EAN>
+      <EANBARCODE>
+        <PassField Barcode="1"  H="120" W="610" X="1130" Y="105"/>
+      </EANBARCODE>
+      <FARMNOBARCODE>
+        <PassField Barcode="1"  H="120" W="610" X="1130" Y="220"/>
+      </FARMNOBARCODE>
+      <FIRSTOWNER>
+        <PassField Barcode="0"  H="300" W="760" X="1000" Y="400"/>
+      </FIRSTOWNER>
+      <MOTHEREAN>
+        <PassField Barcode="0"  H="40" W="440" X="381" Y="560"/>
+      </MOTHEREAN>
+      <PASSDATE>
+        <PassField Barcode="0"  H="48" W="320" X="400" Y="50"/>
+      </PASSDATE>
+      <PASSNO>
+        <PassField Barcode="0"  H="40" W="170" X="1005" Y="60"/>
+      </PASSNO>
+      <SEX>
+        <PassField Barcode="0"  H="40" W="440" X="381" Y="480"/>
+      </SEX>
+      <STOCK>
+        <PassField Barcode="0"  H="40" W="440" X="381" Y="520"/>
+      </STOCK>
+    </PassProfile>
+
+    <PassProfile PassDimX="1700" PassDimY="1280" PassProfileName="PROFIL2">
+      <BIRTHINFO>
+        <PassField Barcode="0"  H="90" W="440" X="370" Y="380"/>
+      </BIRTHINFO>
+      <EAN>
+        <PassField Barcode="0"  H="60" W="500" X="550" Y="155"/>
+      </EAN>
+      <EANBARCODE>
+        <PassField Barcode="1"  H="120" W="610" X="1130" Y="105"/>
+      </EANBARCODE>
+      <FARMNOBARCODE>
+        <PassField Barcode="1"  H="120" W="610" X="1130" Y="220"/>
+      </FARMNOBARCODE>
+      <FIRSTOWNER>
+        <PassField Barcode="0"  H="300" W="760" X="970" Y="380"/>
+      </FIRSTOWNER>
+      <MOTHEREAN>
+        <PassField Barcode="0"  H="40" W="440" X="370" Y="540"/>
+      </MOTHEREAN>
+      <PASSDATE>
+        <PassField Barcode="0"  H="48" W="250" X="425" Y="46"/>
+      </PASSDATE>
+      <PASSNO>
+        <PassField Barcode="0"  H="40" W="170" X="975" Y="58"/>
+      </PASSNO>
+      <SEX>
+        <PassField Barcode="0"  H="40" W="440" X="370" Y="460"/>
+      </SEX>
+      <STOCK>
+        <PassField Barcode="0"  H="40" W="440" X="370" Y="500"/>
+      </STOCK>
+    </PassProfile>
+    
+     <PassProfile PassDimX="1900" PassDimY="1390" PassProfileName="PROFIL3">
+      <BIRTHINFO>
+        <PassField Barcode="0"  H="90" W="440" X="400" Y="410"/>
+      </BIRTHINFO>
+      <EAN>
+        <PassField Barcode="0"  H="60" W="500" X="550" Y="155"/>
+      </EAN>
+      <EANBARCODE>
+        <PassField Barcode="1"  H="120" W="610" X="1230" Y="115"/>
+      </EANBARCODE>
+      <FARMNOBARCODE>
+        <PassField Barcode="1"  H="120" W="610" X="1230" Y="235"/>
+      </FARMNOBARCODE>
+      <FIRSTOWNER>
+        <PassField Barcode="0"  H="310" W="760" X="1025" Y="400"/>
+      </FIRSTOWNER>
+      <MOTHEREAN>
+        <PassField Barcode="0"  H="49" W="440" X="400" Y="585"/>
+      </MOTHEREAN>
+      <PASSDATE>
+        <PassField Barcode="0"  H="48" W="280" X="445" Y="46"/>
+      </PASSDATE>
+      <PASSNO>
+        <PassField Barcode="0"  H="45" W="170" X="1075" Y="62"/>
+      </PASSNO>
+      <SEX>
+        <PassField Barcode="0"  H="45" W="440" X="400" Y="500"/>
+      </SEX>
+      <STOCK>
+        <PassField Barcode="0"  H="45" W="440" X="400" Y="540"/>
+      </STOCK>
+    </PassProfile>
+  </PassProfileArray>
+</PassProfiles>

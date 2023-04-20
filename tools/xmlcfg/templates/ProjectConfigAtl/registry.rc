@@ -1,0 +1,8 @@
+// registry resources
+//
+
+//IDR_MAINDIALOG    REGISTRY DISCARDABLE    "MainDialog.rgs"
+//IDR_ROOT    REGISTRY DISCARDABLE    "Root.rgs"
+//IDR_NEWCLASS9    REGISTRY DISCARDABLE    "NewClass9.rgs"
+//IDR_NEWCLASS9ARRAY    REGISTRY DISCARDABLE    "NewClass9Array.rgs"
+

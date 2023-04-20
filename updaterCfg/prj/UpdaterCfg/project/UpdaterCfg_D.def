@@ -1,0 +1,8 @@
+; UpdaterCfg_D.def : Declares the module parameters for the DLL (Debug Version).
+
+LIBRARY      "UpdaterCfg_D"
+DESCRIPTION  'UpdaterCfg Windows Dynamic Link Library (Debug Version)'
+
+EXPORTS
+; Explicit exports can go here
+

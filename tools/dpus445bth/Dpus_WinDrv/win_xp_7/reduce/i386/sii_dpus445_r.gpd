@@ -1,0 +1,87 @@
+*%-----------------------------------------------
+*% GPD file
+*%
+*% Copyright (c) 2007 Seiko Instruments Inc.
+*%
+*% All Rights Reserved.
+*%-----------------------------------------------
+
+*Include: "SII_DPUS445.GPD"
+*GPDFileName: "SII_DPUS445_R.GPD"
+*ModelName: "SII DPU-S445 Reduce"
+*MasterUnits: PAIR(119, 119)
+*OEMCustomData: "499W104"
+
+
+
+*%-----------------------------------------
+*%
+*%			 Resolution
+*%
+*%-----------------------------------------
+*Feature: Resolution
+{
+	*rcNameID: =RESOLUTION_DISPLAY
+	*DefaultOption: Option1
+	*Option: Option1
+	{
+		*Name: "119 x 119 " =DOTS_PER_INCH
+		*DPI: PAIR(119, 119)
+		*TextDPI: PAIR(119, 119)
+		*RequireUniDir?: TRUE
+		*SpotDiameter: 60
+	}
+}
+
+*XMoveUnit: 119
+*YMoveUnit: 119
+*MinStripBlankPixels: 119
+
+
+
+*%-----------------------------------------
+*%
+*%			 PaperSize
+*%
+*%-----------------------------------------
+*Feature: PaperSize
+{
+	*rcNameID: =PAPER_SIZE_DISPLAY
+	*DefaultOption: A4
+
+	*Option: A4
+	{
+		*rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+		*PrintableArea: PAIR(831, 1289)
+		*PrintableOrigin: PAIR(76, 100)
+		*CursorOrigin: PAIR(76, 88)
+	}
+	*Option: LETTER
+	{
+		*rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+		*PrintableArea: PAIR(831, 1207)
+		*PrintableOrigin: PAIR(90, 100)
+		*CursorOrigin: PAIR(90, 88)
+	}
+    *Option: A5_ROTATED
+    {
+        *rcNameID: =RCID_DMPAPER_SYSTEM_NAME
+		*PrintableArea: PAIR(831, 593)
+		*PrintableOrigin: PAIR(76, 100)
+		*CursorOrigin: PAIR(76, 88)
+	}
+    *Option: CUT_SHEET
+    {
+ 		*rcNameID: 281
+		*Command: CmdSelect
+        {
+			*Order: DOC_SETUP.5
+			*CallbackID: 21
+        }
+		*PageDimensions: PAIR(896, 1264)
+		*PrintableArea: PAIR(831, 1096)
+		*PrintableOrigin: PAIR(32, 48)
+		*CursorOrigin: PAIR(32, 48)
+	}
+}
+

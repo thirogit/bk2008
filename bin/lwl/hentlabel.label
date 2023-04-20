@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DieCutLabel Version="8.0" Units="twips">
+	<PaperOrientation>Landscape</PaperOrientation>
+	<Id></Id>
+	<PaperName>99012 Large Address</PaperName>
+	<DrawCommands>
+		<RoundRectangle X="0" Y="0" Width="2025" Height="5020" Rx="135" Ry="135" />
+	</DrawCommands>
+	<ObjectInfo>
+		<ImageObject>
+			<Name>LOGO</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>False</IsVariable>
+			<Image>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</Image>
+			<ScaleMode>Uniform</ScaleMode>
+			<BorderWidth>0</BorderWidth>
+			<BorderColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<HorizontalAlignment>Left</HorizontalAlignment>
+			<VerticalAlignment>Top</VerticalAlignment>
+		</ImageObject>
+		<Bounds X="322" Y="170" Width="725" Height="785" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<TextObject>
+			<Name>NAME</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>True</IsVariable>
+			<HorizontalAlignment>Center</HorizontalAlignment>
+			<VerticalAlignment>Middle</VerticalAlignment>
+			<TextFitMode>ShrinkToFit</TextFitMode>
+			<UseFullFontHeight>True</UseFullFontHeight>
+			<Verticalized>False</Verticalized>
+			<StyledText>
+				<Element>
+					<String>NAZWA KONTRAHENTA</String>
+					<Attributes>
+						<Font Family="Arial" Size="12" Bold="True" Italic="False" Underline="False" Strikeout="False" />
+						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+					</Attributes>
+				</Element>
+			</StyledText>
+		</TextObject>
+		<Bounds X="940" Y="170" Width="3905" Height="370" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<TextObject>
+			<Name>DATA</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>True</IsVariable>
+			<HorizontalAlignment>Center</HorizontalAlignment>
+			<VerticalAlignment>Middle</VerticalAlignment>
+			<TextFitMode>ShrinkToFit</TextFitMode>
+			<UseFullFontHeight>True</UseFullFontHeight>
+			<Verticalized>False</Verticalized>
+			<StyledText>
+				<Element>
+					<String>DANE KONTRAHENTA LINIA 1
+DANE KONTRAHENTA LINIA 2
+DANE KONTRAHENTA LINIA 3</String>
+					<Attributes>
+						<Font Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+						<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+					</Attributes>
+				</Element>
+			</StyledText>
+		</TextObject>
+		<Bounds X="925" Y="567" Width="3920" Height="775" />
+	</ObjectInfo>
+	<ObjectInfo>
+		<BarcodeObject>
+			<Name>BARCODE</Name>
+			<ForeColor Alpha="255" Red="0" Green="0" Blue="0" />
+			<BackColor Alpha="0" Red="255" Green="255" Blue="255" />
+			<LinkedObjectName></LinkedObjectName>
+			<Rotation>Rotation0</Rotation>
+			<IsMirrored>False</IsMirrored>
+			<IsVariable>False</IsVariable>
+			<Text>PL111111111111</Text>
+			<Type>Code39</Type>
+			<Size>Small</Size>
+			<TextPosition>Bottom</TextPosition>
+			<TextFont Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+			<CheckSumFont Family="Arial" Size="8" Bold="False" Italic="False" Underline="False" Strikeout="False" />
+			<TextEmbedding>None</TextEmbedding>
+			<ECLevel>0</ECLevel>
+			<HorizontalAlignment>Center</HorizontalAlignment>
+			<QuietZonesPadding Left="0" Top="0" Right="0" Bottom="0" />
+		</BarcodeObject>
+		<Bounds X="322" Y="1450" Width="4560" Height="405" />
+	</ObjectInfo>
+</DieCutLabel>

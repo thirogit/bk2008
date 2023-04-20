@@ -1,0 +1,8 @@
+; PassProfile_D.def : Declares the module parameters for the DLL (Debug Version).
+
+LIBRARY      "PassProfile_D"
+DESCRIPTION  'PassProfile Windows Dynamic Link Library (Debug Version)'
+
+EXPORTS
+; Explicit exports can go here
+
